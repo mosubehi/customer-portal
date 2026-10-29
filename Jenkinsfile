@@ -61,7 +61,7 @@ node {
 
                             kubectl rollout status \
                               deployment/customer-portal \
-                              -n dev --timeout=120s
+                              -n dev --timeout=300s
 
                             # Test the health endpoint through port-forwarding.
                             kubectl port-forward \
@@ -98,7 +98,7 @@ node {
 
                             kubectl rollout status \
                               deployment/customer-portal \
-                              -n dev --timeout=120s || true
+                              -n dev --timeout=300s || true
                         '''
 
                         throw deployError
